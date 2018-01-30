@@ -1,0 +1,9 @@
+Working with ssh Keys
+
+I use multiple ssh keys.  There does not seem to be a [consensus](http://superuser.com/questions/121307/is-it-reasonable-to-have-multiple-ssh-keys) on whether or not this is a best practice.  Since I already have multiple keys I am going to continue with that system.
+
+[nerderati ssh blog post](http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/)
+
+[using an ssh config file](http://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client)
+
+associate the correct key with a host `ssh -i ~/.ssh/blah.key username@host.com`
