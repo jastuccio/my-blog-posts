@@ -105,7 +105,7 @@ Now, this might seem like extra work, but having the data flow in one direction 
 
 React builds on a lot of the techniques of functional programming.
 
-Two JavaScript functions that are vital to functional programming that we should look at. 
+Two JavaScript functions that are vital to functional programming that we should look at.
 
 * `.map()`
   * called on an existing array
@@ -140,7 +140,7 @@ For further reading, feel free to check out the following:
 
 -----
 
-### Rendering UI with React
+### 2 Rendering UI with React
 
 using React's .createElement()
 
@@ -177,17 +177,21 @@ Further Research:
 
 [Rendering Elements](https://facebook.github.io/react/docs/rendering-elements.html) from the React docs
 
-------
 
-
+### Create React App
 
 test jsx must return a single element
 
-const message = (
- <h1>All About JSX:</h1>
- <ul>
- <li>JSX</li>
- <li>is</li>
- <li>awesome!</li>
- </ul>
-);
+### Composing with Components
+
+Favor composition over inheritance
+
+compose elements in different ways using nesting and props. You ultimately want your UI components to be independent, focused, and reusable.
+
+### Summary
+
+* JSX uses JavaScript to let us describe the UI by creating elements instead of writing these rigid templates
+* encapsulate groups of elements in React components
+* build larger portions of the UI by composing those elements together
+
+-----
