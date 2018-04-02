@@ -7,7 +7,7 @@ we've created an issue-reporting board.
 
 ——--
 
-### 1 Why React
+## 1 Why React
 
 Composition is combining simple functions to make complex functions.
 A good function should follow the "DOT" rule: Do One Thing
@@ -140,7 +140,7 @@ For further reading, feel free to check out the following:
 
 -----
 
-### 2 Rendering UI with React
+## 2 Rendering UI with React
 
 using React's .createElement()
 
@@ -195,3 +195,4 @@ compose elements in different ways using nesting and props. You ultimately want 
 * build larger portions of the UI by composing those elements together
 
 -----
+## 3 State Management
