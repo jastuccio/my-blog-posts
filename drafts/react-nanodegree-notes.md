@@ -196,3 +196,94 @@ compose elements in different ways using nesting and props. You ultimately want 
 
 -----
 ## 3 State Management
+
+* Props - allow you to pass data into your components
+* Functional Components - an alternative, probably more intuitive approach to creating components
+* Controlled Components - allow you to hook up the forms in yoyr application to your component state
+
+each item needs a key: `key={contact.id}`
+```javascript
+{this.props.contacts.map(contact => (
+          <li key={contact.id} className='contact-list-item'>
+          {contact.name}
+        </li>
+        ))}
+```
+
+Passing Data With Props Recap
+A prop is any input that you pass to a React component. Just like an HTML attribute, a prop name and value are added to the Component.
+
+```javascript
+// passing a prop to a component
+<LogoutButton text='Wanna log out?' />
+```
+In the code above, text is the prop and the string 'Wanna log out?' is the value.
+
+All props are stored on the `this.props object`. So to access this text prop from inside the component, we'd use `this.props.text`:
+
+```javascript
+// access the prop inside the component
+render() {
+ return <div>{this.props.text}</div>
+}
+```
+Further Research
+[Components and Props](https://facebook.github.io/react/docs/components-and-props.html) from the React Docs
+
+### 3.3 Functional Components
+
+If a component is only using a render method to display content, then it can be converted into a Stateless Functional Component.
+
+Stateless Functional Components Recap
+If your component does not keep track of internal state (i.e., all it really has is just a render() method), you can declare the component as a Stateless Functional Component.
+
+Remember that at the end of the day, React components are really just JavaScript functions that return HTML for rendering. As such, the following two examples of a simple Email component are equivalent:
+
+```javascript
+class Email extends React.Component {
+ render() {
+   return (
+     <div>
+       {this.props.text}
+     </div>
+   );
+ }
+
+ const Email = (props) => (
+ <div>
+   {props.text}
+ </div>
+);
+}
+```
+
+In the latter example (written as an ES6 function with an implicit return), rather than accessing props from this.props, we can pass in props directly as an argument to the function itself. In turn, this regular JavaScript function can serve as the Email component's render() method.
+
+Further Research
+[Creating Stateless Function Components](https://www.reactenlightenment.com/react-state/8.4.html) from the React Enlightenment book
+[Functional Components vs. Stateless Functional Components vs. Stateless Components](https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/) from Tyler
+
+### 3.4 State
+
+props
+* attributes from parent components, "read-only" data that are immutable.
+
+state
+* mutable data that ultimately affects what is rendered on the page
+* managed internally by the component itself
+* meant to change over time, commonly due to user input (e.g., clicking on a button on the page).
+
+Two concerns:
+Which state is in my application? How does my UI change based off that state?
+
+#### State Recap
+By having a component manage its own state, any time there are changes made to that state, React will know and automatically make the necessary updates to the page.
+
+This is one of the key benefits of using React to build UI components: when it comes to re-rendering the page, we just have to think about updating state. We don't have to keep track of exactly which parts of the page change each time there are updates. We don't need to decide how we will efficiently re-render the page. React compares the previous output and new output, determines what has changed, and makes these decisions for us. This process of determining what has changed in the previous and new outputs is called Reconciliation.
+
+Further Research
+[Identify Where Your State Should Live](https://facebook.github.io/react/docs/thinking-in-react.html#step-4-identify-where-your-state-should-live)
+
+### 3.5 Update state with setState
+
+In React your UI is just a function of your state
