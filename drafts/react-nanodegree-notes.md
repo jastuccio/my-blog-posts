@@ -286,4 +286,81 @@ Further Research
 
 ### 3.5 Update state with setState
 
-In React your UI is just a function of your state
+In React your UI is just a function of your state.
+
+#### setState() Recap
+While a component can set its state when it initializes, we expect that state to change over time, usually due to user input. The component is able to change its own internal state using this.setState(). Each time state is changed, React knows and will call render() to re-render the component. This allows for fast, efficient updates to your app's UI.
+
+Further Research
+[Using State Correctly](https://facebook.github.io/react/docs/state-and-lifecycle.html) from the React Docs
+Build with React's [article on State](http://buildwithreact.com/tutorial/state)
+
+### 3.6 Proptypes
+
+Type checking a Component's Props with PropTypes `npm install --save prop-types`
+
+#### PropTypes Recap
+All in all, PropTypes is a great way to validate intended data types in our React app. Type checking our data with PropTypes helps us identify these bugs during development to ensure a smooth experience for our app's users.
+
+Further Research
+[prop-types](https://www.npmjs.com/package/prop-types) library from npm
+[Typechecking With Proptypes](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) from the React Docs
+
+### 3.7 Controlled Components
+
+With Controlled Components, our form state lives inside of the component. Because of this, we can easily update our UI based on that form state.
+
+#### Controlled Components Recap
+Controlled components refer to components that render a form, but the "source of truth" for that form state lives inside of the component state rather than inside of the DOM. The benefits of Controlled Components are:
+
+* instant input validation
+* conditionally disable/enable buttons
+* enforce input formats
+
+In our ListContacts component, not only does the component render a form, but it also controls what happens in that form based on user input. In this case, event handlers update the component's state with the user's search query. And as we've learned: any changes to React state will cause a re-render on the page, effectively displaying our live search results.
+
+### 3.8 Lesson Summary
+
+#### Putting it All Into Perspective
+When it comes to keeping track of data in your app, think about what will be done with that data, and what that data will look like as your user interfaces with your app. If you want your component to store mutable local data, consider using state to hold this information. Many times, it is state that will be used to manage controlled form elements in your components.
+
+On the other hand, if some information isn't expected to change over time, and is generally designed to be "read-only" throughout your app, consider using props instead. Both state and props will generally be in the form of an object, and changes in either will trigger a re-render of the component, but they each play very different roles in your app.
+
+We covered a lot in this lesson, and you've made great progress. Here are some resources that may help solidify some of these concepts:
+
+[Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
+[Functional Components vs. Stateless
+Functional Components vs. Stateless Components](https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/)
+
+[Controlled Components](https://facebook.github.io/react/docs/forms.html)
+
+-----
+### 4 Lifecycle events
+
+* `componentDidMount` - invoke immediately after the component is inserted into the DOM
+
+* `componentWillUnmount` - invoke immediately before the component is inserted into the DOM
+
+* `getDerivedStateFromProps` - invoked when mounting or re-rendering the component
+
+#### `render()` Is For Rendering, Only!
+
+ A component's render() method should only be used to render that component; it should not make any HTTP requests, fetch data that's used to display the content, or alter the DOM. The render() method also shouldn't call any other functions that do any of these things, either.
+
+ put the code that should handle things like Ajax requests in what React calls lifecycle events.
+
+#### Lifecycle Events
+
+* specially named methods in a component.
+* automatically bound to the component instance
+* React will call these methods naturally at certain times during the life of a component
+
+The most commonly used ones:
+
+`componentWillMount()` invoked immediately before the component is inserted into the DOM
+
+`componentDidMount()` invoked immediately after the component is inserted into the DOM
+
+`componentWillUnmount()` invoked immediately before a component is removed from the DOM
+
+`componentWillReceiveProps()` invoked whenever the component is about to receive brand new props
