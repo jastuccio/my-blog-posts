@@ -358,9 +358,89 @@ Functional Components vs. Stateless Components](https://tylermcginnis.com/functi
 The most commonly used ones:
 
 `componentWillMount()` invoked immediately before the component is inserted into the DOM
+  * should be used if you're fetching remote data or doing an Ajax request.
 
 `componentDidMount()` invoked immediately after the component is inserted into the DOM
 
 `componentWillUnmount()` invoked immediately before a component is removed from the DOM
 
 `componentWillReceiveProps()` invoked whenever the component is about to receive brand new props
+
+#### `componentDidMount()` Recap
+`componentDidMount()` is one of a number of lifecycle events that React offers. `componentDidMount()` gets called after the component is "mounted" (which means after it is rendered). If you need to dynamically fetch data or run an Ajax request, you should do it in `componentDidMount()`.
+
+Further Research
+[`componentDidMount()`](https://facebook.github.io/react/docs/react-component.html#componentdidmount) from the React Docs
+
+#### Lesson Summary
+
+
+The React Lifecycle Events listed out where they fall in a component's life.
+
+![](https://res.cloudinary.com/jastuccio/image/upload/v1523188533/misc/nd019-react-c1-l4-lifecycle-events_zy6hni.png)
+
+
+
+Starting from the top left of the image, everything starts when ReactDOM renders the component.
+
+As you can see, between the list and this graphic there are a number of different lifecycle events. However, the most commonly used ones are componentDidMount(), componentWillMount(), componentWillUnmount(), and componentWillReceiveProps().
+
+Further Research
+componentWillMount() from the React Docs
+componentDidMount() from the React Docs
+componentWillUnmount() from the React Docs
+componentWillReceiveProps() from the React Docs
+Component Lifecycles from the React Docs
+
+## 5 React Router
+
+React router lets us build single page applications by providing specialized components that:
+* manage the creation of links
+* manage the app's URL
+* provide transitions when navigating between different URL locations
+* and much more
+
+According to the React Router website:
+
+>React Router is a collection of navigational components that compose declaratively with your application.
+
+Single-page applications can work in different ways.
+* by downloading the entire site's contents when you're on the site, everything is already available. The browser doesn't need to refresh the page.
+* by downloading everything that's needed to render the page the user requested. Then when the user navigates to a "new page", asynchronous JavaScript requests are made for just the content that was requested.
+
+**A key factor in a good single-page app is that the URL controls the page content.** Single-page applications are highly interactive, and users want to be able to get back to a certain state using just the URL. This is important for Bookmarkability!
+
+### 5.2 Dynamically Render Pages
+
+ A JavaScript technique called short-circuit evaluation. If the first expression evaluates to true, then the second expression is run. However, if the first expression evaluates to false, then the second expression is skipped. We're using this as a guard to first verify the value of this.state.screen before displaying the correct component.
+
+ ```javascript
+ {this.state.screen === 'list' && (
+  <ListContacts
+  contacts={this.state.contacts}
+  onDeleteContact={this.removeContact}
+  />
+)};
+```
+
+For a deeper dive into this, check out the [short-circuit evaluation info on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Short-circuit_evaluation)
+
+### 5.3 The BrowserRouter Component
+
+we need to install react-router-dom. `npm install --save react-router-dom`
+
+`<BrowserRouter>` listens for changes in the URL and make sure the correct screen shows up when the URl changes.
+
+When you use BrowserRouter, what you're really doing is rendering a Router component and passing it a history prop. History comes from the history library (also built by React Training).
+
+The whole purpose of this library is it abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions.
+
+So in a nutshell, when you use BrowserRouter, you're creating a history object which will listen to changes in the URL and make sure your app is made aware of those changes.
+
+BrowserRouter Component Recap
+In summary, for React Router to work properly, you need to wrap your whole app in a BrowserRouter component. Also, BrowserRouter wraps the history library which makes it possible for your app to be made aware of changes in the URL.
+
+Further Research
+[history](https://github.com/reacttraining/history)
+
+### 5.4 The Link Component
