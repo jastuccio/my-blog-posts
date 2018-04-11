@@ -444,3 +444,38 @@ Further Research
 [history](https://github.com/reacttraining/history)
 
 ### 5.4 The Link Component
+
+Link is a straightforward way to provide declarative, accessible navigation around your application. By passing a to property to the Link component, you tell your app which path to route to.
+
+`<Link to="/about">About</Link>`
+
+sometimes our links need to be a little more complex than just a string. For example, you can pass along query parameters or link to specific parts of a page. What if you wanted to pass state to the new route? To account for these scenarios, instead of passing a string to Links to prop, you can pass it an object like this,
+
+```javascript
+<Link to={{
+ pathname: '/courses',
+ search: '?sort=name',
+ hash: '#the-hash',
+ state: { fromDashboard: true }
+}}>
+ Courses
+</Link>
+```
+
+You can read more information about Link in the [official docs](https://reacttraining.com/react-router/web/api/Link)
+
+##### Link Recap
+React Router provides a Link component which allows you to add declarative, accessible navigation around your application. You'll use it in place of anchor tags (a) as you're typically used to. React Router's <Link> component is a great way to make navigation through your app accessible for users. Passing a to prop to your link, for example, helps guide your users to an absolute path (e.g., /about):
+
+`<Link to="/about">About</Link>`
+Since the <Link> component fully renders a proper anchor tag (<a>) with the appropriate href, you can expect it to behave how a normal link on the web behaves.
+
+Further Research
+[<Link>](https://reacttraining.com/react-router/web/api/Link) at React Training
+[Source Code](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/modules/Link.js)
+
+#### Route Component Recap
+
+to pass props to a specific Route component you'll need to use Route’s render prop.  Render puts you in charge of rendering the component which allows you to pass any props to the rendered component as you'd like.
+
+The Route component is critical when using React Router. It decides which components are rendered based on the current URL path.
