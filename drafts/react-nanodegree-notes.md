@@ -480,5 +480,40 @@ to pass props to a specific Route component you'll need to use Route’s render 
 
 The Route component is critical when using React Router. It decides which components are rendered based on the current URL path.
 
-Further Learning
+#### Further Learning
 If you're interested in learning more about React Router, we recommend these two resources. First, [Build your own React Router v4](https://tylermcginnis.com/build-your-own-react-router-v4/) will walk through how to implement your own mini version of React Router to better understand its implementation details. Next, is React Training's [official documentation](official documentation) for React Router. Feel free to also check out [Tyler McGinnis's React Router](https://tylermcginnis.com/courses/react-router/) course as well!
+
+#### Keep Learning
+Great work! You've learned how to build applications in React, but there's always more to learn! Check out the following resources to up your skills:
+
+* [The React Docs](https://facebook.github.io/react/docs/hello-world.html)
+* [Tyler's Blog](https://tylermcginnis.com/)
+
+
+People to Follow
+
+Whether it be popular blog posts or developers to follow on Twitter, a large part of getting everything out of a new technology is utilizing existing community resources. So we want to share with you with our favorite resources from the React community that we've found helpful over the last few years. Hopefully you'll find them helpful as well.
+
+<ul>
+<li><a target="_blank" href="https://twitter.com/dan_abramov">Dan Abramov</a></li>
+<li><a target="_blank" href="https://twitter.com/sebmarkbage">Sebastian Markbåge</a></li>
+<li><a target="_blank" href="https://twitter.com/left_pad">Henry Zhu</a>
+*<a target="_blank" href="https://twitter.com/peggyrayzis">Peggy Rayzis</a></li>
+<li><a target="_blank" href="https://twitter.com/iammerrick">Merrick Christensen</a></li>
+<li><a target="_blank" href="https://twitter.com/vjeux">Christopher Chedeau</a></li>
+<li><a target="_blank" href="https://twitter.com/reactjs">React</a></li>
+<li><a target="_blank" href="https://twitter.com/tylermcginnis">Tyler McGinnis</a></li>
+</ul>
+
+Blog posts to read
+
+<ul>
+<li><a target="_blank" href="https://medium.com/@dan_abramov/youre-missing-the-point-of-react-a20e34a51e1a">You're missing the point of React</a></li>
+<li><a target="_blank" href="https://tylermcginnis.com/react-aha-moments/">React "Aha" Moments</a></li>
+<li><a target="_blank" href="https://camjackson.net/post/9-things-every-reactjs-beginner-should-know">9 Things every React.js Beginner should know</a></li>
+<li><a target="_blank" href="https://tylermcginnis.com/react-elements-vs-react-components/">React Elements vs React Components</a></li>
+</ul>
+
+If you want to learn more advanced topics in React, you can check out http://https://tylermcginnis.com/.
+
+Thanks for joining us on this journey! Now it's time to move on to learning Redux!
