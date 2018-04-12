@@ -479,3 +479,6 @@ Further Research
 to pass props to a specific Route component you'll need to use Route’s render prop.  Render puts you in charge of rendering the component which allows you to pass any props to the rendered component as you'd like.
 
 The Route component is critical when using React Router. It decides which components are rendered based on the current URL path.
+
+Further Learning
+If you're interested in learning more about React Router, we recommend these two resources. First, [Build your own React Router v4](https://tylermcginnis.com/build-your-own-react-router-v4/) will walk through how to implement your own mini version of React Router to better understand its implementation details. Next, is React Training's [official documentation](official documentation) for React Router. Feel free to also check out [Tyler McGinnis's React Router](https://tylermcginnis.com/courses/react-router/) course as well!
