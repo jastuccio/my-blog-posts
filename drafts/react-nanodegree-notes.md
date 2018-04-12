@@ -199,7 +199,7 @@ compose elements in different ways using nesting and props. You ultimately want 
 
 * Props - allow you to pass data into your components
 * Functional Components - an alternative, probably more intuitive approach to creating components
-* Controlled Components - allow you to hook up the forms in yoyr application to your component state
+* Controlled Components - allow you to hook up the forms in your application to your component state
 
 each item needs a key: `key={contact.id}`
 ```javascript
