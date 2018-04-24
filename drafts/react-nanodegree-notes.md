@@ -178,17 +178,21 @@ Further Research:
 [Rendering Elements](https://facebook.github.io/react/docs/rendering-elements.html) from the React docs
 
 
-### Create React App
+### 2.3 Create React App
 
 test jsx must return a single element
 
-### Composing with Components
+### 2.4 Composing with Components
 
-Favor composition over inheritance
+Compose elements in different ways using nesting and props. You ultimately want your UI components to be independent, focused, and reusable.
 
-compose elements in different ways using nesting and props. You ultimately want your UI components to be independent, focused, and reusable.
+##### Favor composition over inheritance
 
-### Summary
+
+
+
+
+### 2.5 Summary
 
 * JSX uses JavaScript to let us describe the UI by creating elements instead of writing these rigid templates
 * encapsulate groups of elements in React components
